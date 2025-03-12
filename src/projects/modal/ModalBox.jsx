@@ -2,9 +2,7 @@ import React from "react";
 import { Button, ModalWrapper } from "./ModalStyled";
 import img from "../../logo.svg";
 
-const ModalBox = (props) => {
-  const { isModalOpen, setIsModalOpen } = props;
-
+const ModalBox = ({ isModalOpen, setIsModalOpen }) => {
   return (
     <>
       <ModalWrapper className={isModalOpen ? "open" : ""}>

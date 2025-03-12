@@ -1,30 +1,24 @@
-import { useState } from 'react';
-import { ReadMoreCardWrapper } from './ReadMoreStyled';
+import { useState } from "react";
+import { ReadMoreCardWrapper } from "./ReadMoreStyled";
 
-const ReadMoreCard = (props) => {
+const ReadMoreCard = ({ title, desc }) => {
+  const [isTruncated, setIsTruncated] = useState(true);
 
-    const { title, desc } = props;
+  const handleIsTruncated = () => {
+    setIsTruncated((prevState) => !prevState);
+  };
 
-    const [isTruncated, setIsTruncated] = useState(true);
-
-    const handleIsTruncated = () => {
-        setIsTruncated(prevState => !prevState);
-    };
-
-
-    return (
-        <>
-            <ReadMoreCardWrapper>
-                <h2>{title}</h2>
-                <p>
-                    {isTruncated ? desc.slice(0, 70) + '...' : desc}
-                </p>
-                <button type="button" onClick={handleIsTruncated}>
-                    {isTruncated ? 'Read More' : 'Read Less'}
-                </button>
-            </ReadMoreCardWrapper>
-        </>
-    );
+  return (
+    <>
+      <ReadMoreCardWrapper>
+        <h2>{title}</h2>
+        <p>{isTruncated ? desc.slice(0, 70) + "..." : desc}</p>
+        <button type="button" onClick={handleIsTruncated}>
+          {isTruncated ? "Read More" : "Read Less"}
+        </button>
+      </ReadMoreCardWrapper>
+    </>
+  );
 };
 
 export default ReadMoreCard;
