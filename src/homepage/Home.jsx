@@ -16,8 +16,8 @@ const Home = () => {
             <h1>
               <span>React</span> Projects
             </h1>
-            <a href="https://github.com/Bharti277">
-              https://github.com/Bharti277
+            <a href="https://github.com/Bharti277/react-styled-component-project">
+              https://github.com/Bharti277/react-styled-component-project
             </a>
           </header>
           <HomeWrapper>
@@ -27,7 +27,10 @@ const Home = () => {
           </HomeWrapper>
           <footer id="footer">
             <p>
-              Built by | <a href="#">Deependra Bharti</a>
+              Built by |{" "}
+              <a href="https://react-styled-component-project.netlify.app/">
+                Deependra Bharti
+              </a>
             </p>
           </footer>
         </div>
